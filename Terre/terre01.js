@@ -1,10 +1,4 @@
-//Créez un programme qui affiche son nom de fichier.
+const { argv } = require("process");
+const path = require('path');
 
-/*
-   Exemples d’utilisation :
-   $> node exo.js
-   exo.js
-
-   $> node crevette.js
-   crevette.js
-*/
+console.log(path.basename(argv[1]));
