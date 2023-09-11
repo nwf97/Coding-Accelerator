@@ -4,7 +4,6 @@ function division (a, b) {
 	a = argv[2];
 	b = argv[3];
 
-	//const resultat = Math.trunc(a / b);
 	const resultat = parseInt(a / b);
 
 	return resultat;
@@ -19,18 +18,12 @@ function modulo (a, b) {
 	return reste;
 }
 
-/*
-console.log("le resultat " + division() + " est de type: " + typeof(division()));
-console.log("le reste " + modulo() + " est de type: "+ typeof(modulo()));
-*/
+if ( argv[2] < 1 || argv[3] < 1 || argv[2] < argv[3]) {
+	console.log("erreur.")
+}
+else {
+	console.log("résultat: " + division() );
+	console.log("reste: " + modulo() );
+}
 
-console.log("résultat: " + division() );
-console.log("reste: " + modulo() );
-
-
-/*
-console.log(argv[2]);
-console.log(argv[3]);
-console.log(argv[2] / argv[3]);
-console.log(argv[2] % argv[3]);
-*/
+// Syntaxe ternaire condition ? exprSiVrai : exprSiFaux
